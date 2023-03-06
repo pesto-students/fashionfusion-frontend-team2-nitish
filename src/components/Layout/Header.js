@@ -46,33 +46,7 @@ const Header = () => {
                   Home
                 </NavLink>
               </li>
-              <li className="nav-item dropdown">
-                <Link
-                  className="nav-link dropdown-toggle"
-                  to={"/categories"}
-                  data-bs-toggle="dropdown"
-                >
-                  Categories
-                </Link>
-                <ul className="dropdown-menu">
-                  <li>
-                    <Link className="dropdown-item" to={"/categories"}>
-                      All Categories
-                    </Link>
-                  </li>
-                  {categories?.map((c) => (
-                    <li>
-                      <Link
-                        className="dropdown-item"
-                        to={`/category/${c.slug}`}
-                      >
-                        {c.name}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </li>
-
+              
               {!auth?.user ? (
                 <>
                   <li className="nav-item">
@@ -124,9 +98,16 @@ const Header = () => {
               )}
               <li className="nav-item">
                 <NavLink to="/cart" className="nav-link">
+                {
+                  cart?.length > 0 ?
                   <Badge count={cart?.length} showZero offset={[10, -5]}>
-                    Cart
-                  </Badge>
+                  Cart
+                </Badge>:
+                <Badge count={''} showZero offset={[10, -5]}>
+                  Cart
+                </Badge>
+                }
+                  
                 </NavLink>
               </li>
             </ul>

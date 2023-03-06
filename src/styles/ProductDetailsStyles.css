@@ -1,5 +1,9 @@
 .product-details {
   margin-top: 100px !important;
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 
 .product-details-info {
