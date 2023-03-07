@@ -1,7 +1,11 @@
 .cart-page {
   margin-top: 64px;
 }
-
+.cart-overflow
+{
+  height: 400px;
+  overflow-y: scroll;
+}
 .cart-page h1 {
   padding: 15px !important;
   font-family: "roboto", sans-serif;

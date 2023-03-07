@@ -8,7 +8,7 @@ import { BsFacebook,BsInstagram} from "react-icons/bs";
 const Footer = () => {
   return (
     <Layout class="ant-layout-footer" style={{ textAlign: 'center' }}>
-    <Row gutter={16}>
+    <Row >
       <Col xs={24} sm={24} md={6} lg={6} xl={6}>
         <h3>Navigation</h3>
         <ul>
