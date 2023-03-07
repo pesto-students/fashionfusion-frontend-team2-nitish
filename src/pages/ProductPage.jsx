@@ -8,6 +8,7 @@ import toast from "react-hot-toast";
 import Layout from "./../components/Layout/Layout";
 import { AiOutlineReload } from "react-icons/ai";
 import "../styles/Homepage.css";
+import { Shimmer } from "../components/Shimmer";
 
 const ProductPage = () => {
   const navigate = useNavigate();
@@ -146,48 +147,58 @@ const ProductPage = () => {
         <div className="col-md-9 ">
           <h1 className="text-center">All Products</h1>
           <div className="d-flex flex-wrap">
-            {products?.map((p) => (
-              <div  className="card m-2" key={p._id}>
-              
-                <img onClick={() => navigate(`/product/${p.slug}`)} 
-                  src={`/api/v1/product/product-photo/${p._id}`}
-                  className="card-img-top"
-                  alt={p.name}
-                />
+        
+          {
+            products.length>0?
+              <React.Fragment>
+              {products?.map((p) => (
+                <div  className="card m-2" key={p._id}>
                 
-                <div className="card-body">
-                <h5 onClick={() => navigate(`/product/${p.slug}`)}  className="card-title">{p.name}</h5>
-                  <div className="card-name-price">
-
-                    <h5 className="card-title card-price-discount">
-                      ${p.price}
-                    </h5>
-                    <h5 className="card-title card-price-original">
-                    ${(p.price)*1.25}
-                    </h5>
-                  </div>
-                  <p className="card-text ">
-                    {p.description.substring(0, 60)}...
-                  </p>
-                  <div className="card-name-price">
-                   
-                    <button
-                      className="add-to-cart btn ms-1"
-                      onClick={() => {
-                        setCart([...cart, p]);
-                        localStorage.setItem(
-                          "cart",
-                          JSON.stringify([...cart, p])
-                        );
-                        toast.success("Item Added to cart");
-                      }}
-                    >
-                      ADD TO CART
-                    </button>
+                  <img onClick={() => navigate(`/product/${p.slug}`)} 
+                    src={`/api/v1/product/product-photo/${p._id}`}
+                    className="card-img-top"
+                    alt={p.name}
+                  />
+                  
+                  <div className="card-body">
+                  <h5 onClick={() => navigate(`/product/${p.slug}`)}  className="card-title">{p.name}</h5>
+                    <div className="card-name-price">
+  
+                      <h5 className="card-title card-price-discount">
+                        ${p.price}
+                      </h5>
+                      <h5 className="card-title card-price-original">
+                      ${(p.price)*1.25}
+                      </h5>
+                    </div>
+                    <p onClick={() => navigate(`/product/${p.slug}`)}  className="card-text ">
+                      {p.description.substring(0, 60)}...
+                    </p>
+                    <div className="card-name-price">
+                     
+                      <button
+                        className="add-to-cart btn ms-1"
+                        onClick={() => {
+                          setCart([...cart, p]);
+                          localStorage.setItem(
+                            "cart",
+                            JSON.stringify([...cart, p])
+                          );
+                          toast.success("Item Added to cart");
+                        }}
+                      >
+                        ADD TO CART
+                      </button>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
+              </React.Fragment>
+              :
+              <Shimmer/>
+          }
+         
+          
           </div>
           <div className="m-2 p-3">
             {products && products.length < total && (
