@@ -171,7 +171,7 @@ const ProductPage = () => {
                       ${(p.price)*1.25}
                       </h5>
                     </div>
-                    <p className="card-text ">
+                    <p onClick={() => navigate(`/product/${p.slug}`)}  className="card-text ">
                       {p.description.substring(0, 60)}...
                     </p>
                     <div className="card-name-price">
