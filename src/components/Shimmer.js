@@ -40,3 +40,14 @@ export const Shimmer = () => {
         </React.Fragment>
     )
 }
+
+
+export const ProductDetailsShimmer=()=>
+{
+    return(
+        <React.Fragment>
+        <div style={{width:"80%",height:"350px",background:"grey"}}>
+        </div>
+        </React.Fragment>
+    )
+}

@@ -5,6 +5,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import "../styles/ProductDetailsStyles.css";
 import { useCart } from "../context/cart";
 import toast from "react-hot-toast";
+import { ProductDetailsShimmer } from "../components/Shimmer";
 const ProductDetails = () => {
   const [cart, setCart] = useCart();
   const params = useParams();
@@ -16,6 +17,11 @@ const ProductDetails = () => {
   useEffect(() => {
     if (params?.slug) getProduct();
   }, [params?.slug]);
+
+  const scrollToTop = () => {
+    window.scrollTo(0, 0)
+}
+
   //getProduct
   const getProduct = async () => {
     try {
@@ -39,7 +45,13 @@ const ProductDetails = () => {
       console.log(error);
     }
   };
+
+  // if(product.length===0)
+  // {
+  //    return <ProductDetailsShimmer/>
+  // }
   return (
+    
     <Layout>
       <div className=" product-details" >
         <div className="col-md-4">
@@ -49,6 +61,7 @@ const ProductDetails = () => {
             alt={product.name}
             height="400px"
             width={"250px"}
+            style={{background:"gray"}}
           />
         </div>
         <div className="col-md-5 product-details-info">
@@ -73,7 +86,7 @@ const ProductDetails = () => {
             );
             toast.success("Item Added to cart");
           }}
-          class="btn btn-secondary ms-1">ADD TO CART</button>
+          class="add-to-cart btn ms-1">ADD TO CART</button>
         </div>
       </div>
       <hr />
@@ -85,46 +98,57 @@ const ProductDetails = () => {
         <div className="d-flex flex-wrap">
           {relatedProducts?.map((p) => (
             <div className="card m-2" key={p._id}>
-              <img
+              <img onClick={() => 
+                {
+                  scrollToTop();
+                  navigate(`/product/${p.slug}`)
+                }
+               } 
                 src={`/api/v1/product/product-photo/${p._id}`}
                 className="card-img-top"
                 alt={p.name}
               />
               <div className="card-body">
-                <div className="card-name-price">
-                  <h5 className="card-title">{p.name}</h5>
-                  <h5 className="card-title card-price">
-                    {p.price.toLocaleString("en-US", {
-                      style: "currency",
-                      currency: "USD",
-                    })}
-                  </h5>
-                </div>
-                <p className="card-text ">
-                  {p.description.substring(0, 60)}...
-                </p>
-                <div className="card-name-price">
-                  <button
-                    className="btn btn-info ms-1"
-                    onClick={() => navigate(`/product/${p.slug}`)}
-                  >
-                    More Details
-                  </button>
-                  {/* <button
-                  className="btn btn-dark ms-1"
-                  onClick={() => {
-                    setCart([...cart, p]);
-                    localStorage.setItem(
-                      "cart",
-                      JSON.stringify([...cart, p])
-                    );
-                    toast.success("Item Added to cart");
-                  }}
-                >
-                  ADD TO CART
-                </button> */}
-                </div>
-              </div>
+                  <h5 onClick={() => 
+                    {
+                      scrollToTop();
+                      navigate(`/product/${p.slug}`)
+                    }
+                   }  className="card-title">{p.name}</h5>
+                    <div className="card-name-price">
+  
+                      <h5 className="card-title card-price-discount">
+                        ${p.price}
+                      </h5>
+                      <h5 className="card-title card-price-original">
+                      ${(p.price)*1.25}
+                      </h5>
+                    </div>
+                    <p onClick={() => 
+                      {
+                        scrollToTop();
+                        navigate(`/product/${p.slug}`)
+                      }
+                     }  className="card-text ">
+                      {p.description.substring(0, 60)}...
+                    </p>
+                    <div className="card-name-price">
+                     
+                      <button
+                        className="add-to-cart btn ms-1"
+                        onClick={() => {
+                          setCart([...cart, p]);
+                          localStorage.setItem(
+                            "cart",
+                            JSON.stringify([...cart, p])
+                          );
+                          toast.success("Item Added to cart");
+                        }}
+                      >
+                        ADD TO CART
+                      </button>
+                    </div>
+                  </div>
             </div>
           ))}
         </div>

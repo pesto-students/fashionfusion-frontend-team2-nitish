@@ -8,6 +8,7 @@ import toast from "react-hot-toast";
 import Layout from "./../components/Layout/Layout";
 import { AiOutlineReload } from "react-icons/ai";
 import "../styles/Homepage.css";
+import Slider from "../components/Slider";
 
 const HomePage = () => {
   const navigate = useNavigate();
@@ -108,15 +109,7 @@ const HomePage = () => {
   };
   return (
     <Layout title={"ALl Products - Best offers "}>
-      {/* banner image */}
-      <img    onClick={() => navigate("/product-page")}
-        src="https://vendee.vercel.app/static/media/Carousel1.1a8c7cd4.webp"
-        className="banner-img"
-        alt="bannerimage"
-        width={"100%"}
-      />
-      {/* banner image */}
-      
+      <Slider/>
     </Layout>
   );
 };

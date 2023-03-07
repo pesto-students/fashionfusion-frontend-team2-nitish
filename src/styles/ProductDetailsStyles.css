@@ -18,8 +18,9 @@
 }
 
 .similar-products .card {
-  background-color: rgba(128, 128, 128, 0.097);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   width: 18rem;
+  cursor: pointer;
 }
 
 .similar-products .card-name-price {
@@ -28,9 +29,15 @@
   justify-content: space-between;
 }
 
-.similar-products .card-price {
-  color: green;
-  font-weight: bold;
+.similar-products .card-price-original {
+  font-weight: 400;
+  text-decoration: line-through;
+}
+.similar-products .card-price-discount {
+  font-size: 1.45rem;
+  font-weight: 500;
+  
+ 
 }
 .similar-products button {
   border-radius: 0;
@@ -45,9 +52,6 @@
   color: rgb(90, 89, 89);
 }
 
-.similar-products .card img:hover {
-  transform: scale(0.9);
-}
 
 .similar-products .card-img-top {
   height: 300px !important;
