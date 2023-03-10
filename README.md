@@ -1,33 +1,26 @@
-![Logo](https://res.cloudinary.com/die12ywpb/image/upload/v1677599870/Minimalist_Brown_Music_Logo_Instagram_f_h0utlr.png)
-
-
-# Shoptik - Furniture eCommerce Web App
-Shoptik is a full-stack eCommerce project designed to sell furniture online. The project uses modern technologies to provide an engaging user interface and a seamless shopping experience. The frontend of the project was developed using React, Context API, and React Router. Stripe was integrated as the payment gateway, and user authentication and authorization were implemented using Auth0.
-
-For data storage, Airtable was used as a scalable and efficient database solution. Serverless functions were implemented on the backend to handle the processing of data and the communication between the frontend and the database.
-
+# Fashion Fusion eCommerce Web App
+Fashion Fusion is a full-stack eCommerce project designed to sell clothes online. The project uses modern technologies to provide an engaging user interface and a seamless shopping experience. The frontend of the project was developed using React, Context API, and React Router. Paypal was integrated as the payment gateway.
 
 ## Features
-
-- 📱 Easy to navigate user interface for furniture shopping
-- 💳 Secure payment gateway integration using Stripe 
-- 🔐 User authentication and authorization using Auth0 
-- 📝 Efficient data storage and retrieval using Airtable 
+- 📱 Easy to navigate user interface for shopping
+- 💳 Secure payment gateway integration using Paypal 
+- 🔐 User authentication and authorization using JWT 
+- 📝 Efficient data storage and retrieval MongoDB 
 - 📲 Responsive and fast frontend using React, Context API, and React Router
-- 🏗️ Scalable backend using serverless functions
+- 🏗️ Scalable backend using Node.js
 
 
 ## Tech Stack
 
-**Frontend:** React, Context API, React Router, TailwindCSS
+**Frontend:** React, Context API, React Router, Ant Design
 
-**Backend:** Netlify Serverless functions
+**Backend:** Node.js
 
-**Payment Gateway:** Stripe
+**Payment Gateway:** Paypal
 
-**Data Storage:** Airtable
+**Data Storage:** MongoDB
 
-**User Authentication:** Auth0
+**User Authentication:** JWT
 ## Live Project
 
 You can access the live version of the Shoptik eCommerce by following this link [Shoptik](https://shoptik.netlify.app)
