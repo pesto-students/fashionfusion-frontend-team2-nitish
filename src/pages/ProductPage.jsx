@@ -149,7 +149,7 @@ const ProductPage = () => {
           <div className="d-flex flex-wrap">
         
           {
-            products.length>0?
+            products?.length>0?
               <React.Fragment>
               {products?.map((p) => (
                 <div  className="card m-2" key={p._id}>
