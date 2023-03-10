@@ -1,70 +1,77 @@
-# Getting Started with Create React App
+![Logo](https://res.cloudinary.com/die12ywpb/image/upload/v1677599870/Minimalist_Brown_Music_Logo_Instagram_f_h0utlr.png)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+# Shoptik - Furniture eCommerce Web App
+Shoptik is a full-stack eCommerce project designed to sell furniture online. The project uses modern technologies to provide an engaging user interface and a seamless shopping experience. The frontend of the project was developed using React, Context API, and React Router. Stripe was integrated as the payment gateway, and user authentication and authorization were implemented using Auth0.
 
-In the project directory, you can run:
+For data storage, Airtable was used as a scalable and efficient database solution. Serverless functions were implemented on the backend to handle the processing of data and the communication between the frontend and the database.
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- 📱 Easy to navigate user interface for furniture shopping
+- 💳 Secure payment gateway integration using Stripe 
+- 🔐 User authentication and authorization using Auth0 
+- 📝 Efficient data storage and retrieval using Airtable 
+- 📲 Responsive and fast frontend using React, Context API, and React Router
+- 🏗️ Scalable backend using serverless functions
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Tech Stack
 
-### `npm run build`
+**Frontend:** React, Context API, React Router, TailwindCSS
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**Backend:** Netlify Serverless functions
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+**Payment Gateway:** Stripe
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**Data Storage:** Airtable
 
-### `npm run eject`
+**User Authentication:** Auth0
+## Live Project
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+You can access the live version of the Shoptik eCommerce by following this link [Shoptik](https://shoptik.netlify.app)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Screenshots
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+**Desktop**
 
-## Learn More
+![App Screenshot](https://res.cloudinary.com/die12ywpb/image/upload/v1677599343/screencapture-shoptik-netlify-app-2023-02-28-21_14_57_io0yvv.png)
+## Lessons Learned
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Integrating Stripe payment on the frontend and backend using Stripe API
+- Creating a secure and scalable backend using serverless functions
+- Implementing user authentication and authorization using Auth0
+- Using Airtable as a database solution for efficient data storage and retrieval
+- Implementing a responsive and fast frontend using React, Context API, and React Router
+- Understanding the importance of proper project structure and organization
+- Leveraging Git for version control and collaboration in software development
+- Writing clean and maintainable code for long-term project sustainability
+- Handling errors and debugging issues in a full-stack project
+- Ensuring the security of user information and payment transactions.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+## Acknowledgements
+- [React](https://beta.reactjs.org/)
+- [Stripe](https://stripe.com/docs)
+- [Airtable](https://airtable.com/developers/web/api/introduction)
+- [Auth0](https://auth0.com/docs)
+- [Vite](https://vitejs.dev/)
+- [React Router](https://reactrouter.com/en/main)
+- [React Icons](https://react-icons.github.io/react-icons)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+## Design Inspiration
+- [Behance](https://www.behance.net/gallery/85274215/Furniture-e-Commerce-Website-Landing-Page-Exploration)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## License
+Shoptik is licensed under the MIT License. See the LICENSE file for more information.
+[MIT](https://choosealicense.com/licenses/mit/)
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
+## Feedback
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Please let us know your thoughts on my app by sending any suggestions or feedback to kumaravishek2015@gmail.com.
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
