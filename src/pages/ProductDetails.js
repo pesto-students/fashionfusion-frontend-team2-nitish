@@ -61,7 +61,7 @@ const ProductDetails = () => {
             alt={product.name}
             height="400px"
             width={"250px"}
-            style={{background:"gray"}}
+            style={{background:"#D3D3D3"}}
           />
         </div>
         <div className="col-md-5 product-details-info">

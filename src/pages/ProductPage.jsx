@@ -158,6 +158,7 @@ const ProductPage = () => {
                     src={`https://fashion-fusion-backend.onrender.com/api/v1/product/product-photo/${p._id}`}
                     className="card-img-top"
                     alt={p.name}
+                    style={{background:"#D3D3D3"}}
                   />
                   
                   <div className="card-body">
