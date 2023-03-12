@@ -78,8 +78,8 @@ const CartPage = () => {
     }
   };
   return (
-    <Layout>
-      <div className=" cart-page">
+    <Layout >
+      <div className="cart-page">
         <div className="row">
           <div className="col-md-12">
             <h1 className="text-center bg-light p-2 mb-1">
@@ -93,10 +93,13 @@ const CartPage = () => {
                     }`
                   : " Your Cart Is Empty"}
               </p>
+              
             </h1>
           </div>
         </div>
-        <div className="container ">
+        {
+          cart?.length>0 ?
+          <div className="container" >
           <div className="row ">
             <div className="col-md-7  p-0 m-0 cart-overflow" >
               {cart?.map((p) => (
@@ -194,7 +197,9 @@ const CartPage = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div>: ""
+        }
+        
       </div>
     </Layout>
   );
