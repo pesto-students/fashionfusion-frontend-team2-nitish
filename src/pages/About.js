@@ -1,7 +1,7 @@
 import React from "react";
 import Layout from "./../components/Layout/Layout";
 
-const About = () => {
+function About  () {
   return (
     <Layout title={"About us - Ecommer app"}>
       <div className="row contactus ">
