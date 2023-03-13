@@ -1,70 +1,70 @@
-# Getting Started with Create React App
+# Fashion Fusion eCommerce Web App
+Fashion Fusion is a full-stack eCommerce project designed to sell clothes online. The project uses modern technologies to provide an engaging user interface and a seamless shopping experience. The frontend of the project was developed using React, Context API, and React Router. Paypal was integrated as the payment gateway.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Features
+- 📱 Easy to navigate user interface for shopping
+- 💳 Secure payment gateway integration using Paypal 
+- 🔐 User authentication and authorization using JWT 
+- 📝 Efficient data storage and retrieval MongoDB 
+- 📲 Responsive and fast frontend using React, Context API, and React Router
+- 🏗️ Scalable backend using Node.js
 
-## Available Scripts
 
-In the project directory, you can run:
+## Tech Stack
 
-### `npm start`
+**Frontend:** React, Context API, React Router, Ant Design
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+**Backend:** Node.js
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+**Payment Gateway:** Paypal
 
-### `npm test`
+**Data Storage:** MongoDB
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**User Authentication:** JWT
+## Live Project
 
-### `npm run build`
+You can access the live version of the Shoptik eCommerce by following this link [Shoptik](https://shoptik.netlify.app)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Screenshots
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**Desktop**
 
-### `npm run eject`
+![App Screenshot](https://res.cloudinary.com/die12ywpb/image/upload/v1677599343/screencapture-shoptik-netlify-app-2023-02-28-21_14_57_io0yvv.png)
+## Lessons Learned
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Integrating Stripe payment on the frontend and backend using Stripe API
+- Creating a secure and scalable backend using serverless functions
+- Implementing user authentication and authorization using Auth0
+- Using Airtable as a database solution for efficient data storage and retrieval
+- Implementing a responsive and fast frontend using React, Context API, and React Router
+- Understanding the importance of proper project structure and organization
+- Leveraging Git for version control and collaboration in software development
+- Writing clean and maintainable code for long-term project sustainability
+- Handling errors and debugging issues in a full-stack project
+- Ensuring the security of user information and payment transactions.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Acknowledgements
+- [React](https://beta.reactjs.org/)
+- [Stripe](https://stripe.com/docs)
+- [Airtable](https://airtable.com/developers/web/api/introduction)
+- [Auth0](https://auth0.com/docs)
+- [Vite](https://vitejs.dev/)
+- [React Router](https://reactrouter.com/en/main)
+- [React Icons](https://react-icons.github.io/react-icons)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+## Design Inspiration
+- [Behance](https://www.behance.net/gallery/85274215/Furniture-e-Commerce-Website-Landing-Page-Exploration)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## License
+Shoptik is licensed under the MIT License. See the LICENSE file for more information.
+[MIT](https://choosealicense.com/licenses/mit/)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Feedback
 
-### Analyzing the Bundle Size
+Please let us know your thoughts on my app by sending any suggestions or feedback to kumaravishek2015@gmail.com.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
