@@ -10,6 +10,7 @@ const Slider = () => {
     // dots: true,
     infinite: true,
     speed: 500,
+    autoplay: true,
     slidesToShow: 1,
     slidesToScroll: 1,
   };
