@@ -79,13 +79,13 @@ const ProductPage = () => {
 
   // filter by cat
   const handleFilter = (value, id) => {
-    let all = [...checked];
-    if (value) {
-      all.push(id);
-    } else {
-      all = all.filter((c) => c !== id);
-    }
-    setChecked(all);
+    // let all = [checked];
+    // if (value) {
+    //   all.push(id);
+    // } else {
+    //   all = all.filter((c) => c !== id);
+    // }
+    setChecked(id);
   };
   useEffect(() => {
     if (!checked.length || !radio.length) getAllProducts();
@@ -97,6 +97,8 @@ const ProductPage = () => {
 
   //get filterd product
   const filterProduct = async () => {
+    console.log("checked",checked)
+    
     try {
       const { data } = await axios.post("https://fashion-fusion-backend.onrender.com/api/v1/product/product-filters", {
         checked,
@@ -114,19 +116,31 @@ const ProductPage = () => {
        <div className="col-md-3 filters">
           <h4 className="text-center">Filter By Category</h4>
           <div className="d-flex flex-column">
-            {categories?.map((c) => (
-              <Checkbox
-                key={c._id}
-                onChange={(e) => handleFilter(e.target.checked, c._id)}
-              >
-                {c.name}
-              </Checkbox>
-            ))}
+          <Radio.Group onChange={(e) => 
+            {
+              setProducts('')
+              setChecked(e.target.value)
+            }
+           }>
+          {categories?.map((p) => (
+            <div key={p._id}>
+              <Radio value={p._id}>{p.name}</Radio>
+            </div>
+          ))}
+        </Radio.Group>
           </div>
           {/* price filter */}
+
+         
+
           <h4 className="text-center mt-4">Filter By Price</h4>
           <div className="d-flex flex-column">
-            <Radio.Group onChange={(e) => setRadio(e.target.value)}>
+            <Radio.Group onChange={(e) => 
+              {
+                setProducts('')
+                setRadio(e.target.value)
+              }
+            }>
               {Prices?.map((p) => (
                 <div key={p._id}>
                   <Radio value={p.array}>{p.name}</Radio>
@@ -207,7 +221,13 @@ const ProductPage = () => {
                 className="btn loadmore"
                 onClick={(e) => {
                   e.preventDefault();
-                  setPage(page + 1);
+                  if(checked && radio)
+                  {
+                    setPage(1);
+                  }
+                  else{
+                    setPage(page + 1);
+                  }
                 }}
               >
                 {loading ? (
@@ -228,3 +248,9 @@ const ProductPage = () => {
 };
 
 export default ProductPage;
+
+
+
+
+
+
