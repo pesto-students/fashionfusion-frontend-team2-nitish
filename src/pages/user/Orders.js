@@ -17,9 +17,9 @@ const Orders = () => {
     }
   };
 
-  useEffect(() => {
-    if (auth?.token) getOrders();
-  }, [auth?.token]);
+//   useEffect(() => {
+//     if (auth?.token) getOrders();
+//   }, [auth?.token]);
   return (
     <Layout title={"Your Orders"}>
       <div className="container-flui p-3 m-3 dashboard">
