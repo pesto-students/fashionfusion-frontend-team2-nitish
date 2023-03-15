@@ -4,8 +4,8 @@ import axios from "axios";
 const AuthContext = createContext();
 const AuthProvider = ({ children }) => {
   const [auth, setAuth] = useState({
-    user: "Jitesh",
-    token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2ZhNjRhZDM5NWU1ZWMyZTJkOGYzMjIiLCJpYXQiOjE2Nzg4MTU0MTEsImV4cCI6MTY3OTQyMDIxMX0.Po6wujsIRunmwqdKDttaPIJzbqzLUDtdg5kaQYGxN-0",
+    user: null,
+    token: "",
   });
 
   //default axios
