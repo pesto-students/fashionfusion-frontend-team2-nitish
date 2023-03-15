@@ -17,6 +17,8 @@ const CartPage = () => {
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
+
+  console.log(cart);
   //total price
   const totalPrice = () => {
     try {
