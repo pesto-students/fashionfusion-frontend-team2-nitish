@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { Checkbox, Radio } from "antd";
+import {  Radio } from "antd";
 import { Prices } from "../components/Prices";
 import { useCart } from "../context/cart";
 import axios from "axios";
@@ -97,7 +97,7 @@ const ProductPage = () => {
 
   //get filterd product
   const filterProduct = async () => {
-    console.log("checked",checked)
+    // console.log("checked",typeof checked)
     
     try {
       const { data } = await axios.post("https://fashion-fusion-backend.onrender.com/api/v1/product/product-filters", {
