@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import {  Radio } from "antd";
+
 import { Prices } from "../components/Prices";
 import { useCart } from "../context/cart";
 import axios from "axios";
@@ -21,10 +21,17 @@ const ProductPage = () => {
   const [page, setPage] = useState(1);
   const [loading, setLoading] = useState(false);
 
+  const scrollToTop = () => {
+    window.scrollTo(0, 0)
+}
+scrollToTop()
+
   //get all cat
   const getAllCategory = async () => {
     try {
-      const { data } = await axios.get("https://fashion-fusion-backend.onrender.com/api/v1/category/get-category");
+      const { data } = await axios.get(
+        "https://fashion-fusion-backend.onrender.com/api/v1/category/get-category"
+      );
       if (data?.success) {
         setCategories(data?.category);
       }
@@ -41,7 +48,9 @@ const ProductPage = () => {
   const getAllProducts = async () => {
     try {
       setLoading(true);
-      const { data } = await axios.get(`https://fashion-fusion-backend.onrender.com/api/v1/product/product-list/${page}`);
+      const { data } = await axios.get(
+        `https://fashion-fusion-backend.onrender.com/api/v1/product/product-list/${page}`
+      );
       setLoading(false);
       setProducts(data.products);
     } catch (error) {
@@ -53,22 +62,26 @@ const ProductPage = () => {
   //getTOtal COunt
   const getTotal = async () => {
     try {
-      const { data } = await axios.get("https://fashion-fusion-backend.onrender.com/api/v1/product/product-count");
+      const { data } = await axios.get(
+        "https://fashion-fusion-backend.onrender.com/api/v1/product/product-count"
+      );
       setTotal(data?.total);
     } catch (error) {
       console.log(error);
     }
   };
 
-  useEffect(() => {
-    if (page === 1) return;
-    loadMore();
-  }, [page]);
+  // useEffect(() => {
+  //   if (page === 1) return;
+  //   loadMore();
+  // }, [page]);
   //load more
   const loadMore = async () => {
     try {
       setLoading(true);
-      const { data } = await axios.get(`https://fashion-fusion-backend.onrender.com/api/v1/product/product-list/${page}`);
+      const { data } = await axios.get(
+        `https://fashion-fusion-backend.onrender.com/api/v1/product/product-list/${page}`
+      );
       setLoading(false);
       setProducts([...products, ...data?.products]);
     } catch (error) {
@@ -77,19 +90,10 @@ const ProductPage = () => {
     }
   };
 
-  // filter by cat
-  const handleFilter = (value, id) => {
-    // let all = [checked];
-    // if (value) {
-    //   all.push(id);
-    // } else {
-    //   all = all.filter((c) => c !== id);
-    // }
-    setChecked(id);
-  };
+  
   useEffect(() => {
-    if (!checked.length || !radio.length) getAllProducts();
-  }, [checked.length, radio.length]);
+   getAllProducts();
+  },[]);
 
   useEffect(() => {
     if (checked.length || radio.length) filterProduct();
@@ -98,159 +102,132 @@ const ProductPage = () => {
   //get filterd product
   const filterProduct = async () => {
     // console.log("checked",typeof checked)
-    
+
     try {
-      const { data } = await axios.post("https://fashion-fusion-backend.onrender.com/api/v1/product/product-filters", {
-        checked,
-        radio,
-      });
+      const { data } = await axios.post(
+        "https://fashion-fusion-backend.onrender.com/api/v1/product/product-filters",
+        {
+          checked,
+          radio,
+        }
+      );
+     if(data?.products.length===0) 
+     {
+      setProducts(0);
+     }
+     else{
       setProducts(data?.products);
+     }
+      
     } catch (error) {
       console.log(error);
     }
   };
   return (
     <Layout title={"ALl Products - Best offers "}>
-     
-      <div className="container-fluid row mt-3 home-page">
-       <div className="col-md-3 filters">
-          <h4 className="text-center">Filter By Category</h4>
-          <div className="d-flex flex-column">
-          <Radio.Group onChange={(e) => 
-            {
-              setProducts('')
-              setChecked(e.target.value)
-            }
-           }>
-          {categories?.map((p) => (
-            <div key={p._id}>
-              <Radio value={p._id}>{p.name}</Radio>
-            </div>
+      <h1>dfddc</h1>
+      <div> 
+        <select
+          name=""
+          id=""
+          onChange={(e) => {
+            setProducts('')
+            setChecked(e.target.value);
+          }}
+        >
+          <option value="">Select a Category</option>
+          {categories.map((p) => (
+            <option value={p._id}>{p.name}</option>
           ))}
-        </Radio.Group>
-          </div>
-          {/* price filter */}
+        </select>
 
-         
-
-          <h4 className="text-center mt-4">Filter By Price</h4>
-          <div className="d-flex flex-column">
-            <Radio.Group onChange={(e) => 
-              {
-                setProducts('')
-                setRadio(e.target.value)
-              }
-            }>
-              {Prices?.map((p) => (
-                <div key={p._id}>
-                  <Radio value={p.array}>{p.name}</Radio>
-                </div>
-              ))}
-            </Radio.Group>
-          </div>
-          <div className="d-flex flex-column">
-            <button
-              className=" add-to-cart btn ms-1"
-              onClick={() => window.location.reload()}
-            >
-              RESET FILTERS
-            </button>
-          </div>
-        </div>
-        
-        <div className="col-md-9 ">
-          <h1 className="text-center">All Products</h1>
-          <div className="d-flex flex-wrap">
-        
+        <select
+          onChange={(e) => {
+            setProducts('')
+            let val = [e.target.value];
+            const result = val.map((str) => str.split(",").map(Number)).flat();
+           
+            setRadio(result);
+          }}
+        >
+          <option>Pricing Range</option>
+          {Prices.map((p) => (
+            <option value={p.array}>{p.name}</option>
+          ))}
+        </select>
+        <button onClick={()=>
           {
-            products?.length>0?
-              <React.Fragment>
-              {products?.map((p) => (
-                <div  className="card m-2" key={p._id}>
-                
-                  <img onClick={() => navigate(`/product/${p.slug}`)} 
+           window.location.reload()
+          }}>
+        Reset Filters
+        </button>
+      </div>
+      {products.length>0 ?
+        <div className="container-fluid pt-5">
+        <div className="text-center mb-4"></div>
+        <div className="row px-xl-5 pb-3">
+          {products?.map((p) => (
+            <div className="col-lg-3 col-md-6 col-sm-12 pb-1" key={p._id}>
+              <div className="card product-item border-0 mb-4">
+                <div className="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
+                  <img
+                    className="img-fluid w-100"
                     src={`https://fashion-fusion-backend.onrender.com/api/v1/product/product-photo/${p._id}`}
-                    className="card-img-top"
-                    alt={p.name}
-                    style={{background:"#D3D3D3"}}
+                    alt="product"
+                    style={{ background: "gray" }}
                   />
-                  
-                  <div className="card-body">
-                  <h5 onClick={() => navigate(`/product/${p.slug}`)}  className="card-title">{p.name}</h5>
-                    <div className="card-name-price">
-  
-                      <h5 className="card-title card-price-discount">
-                        ${p.price}
-                      </h5>
-                      <h5 className="card-title card-price-original">
-                      ${(p.price)*1.25}
-                      </h5>
-                    </div>
-                    <p onClick={() => navigate(`/product/${p.slug}`)}  className="card-text ">
-                      {p.description.substring(0, 60)}...
-                    </p>
-                    <div className="card-name-price">
-                     
-                      <button
-                        className="add-to-cart btn ms-1"
-                        onClick={() => {
-                          setCart([...cart, p]);
-                          localStorage.setItem(
-                            "cart",
-                            JSON.stringify([...cart, p])
-                          );
-                          toast.success("Item Added to cart");
-                        }}
-                      >
-                        ADD TO CART
-                      </button>
-                    </div>
+                </div>
+                <div className="card-body border-left border-right text-center p-0 pt-4 pb-3">
+                  <h6 className="text-truncate mb-3">{p.name}</h6>
+                  <div className="d-flex justify-content-center">
+                    <h6> ${p.price}</h6>
+                    <h6 className="text-muted ml-2">
+                      <del> ${p.price * 1.25}</del>
+                    </h6>
                   </div>
                 </div>
-              ))}
-              </React.Fragment>
-              :
-              <Shimmer/>
-          }
-         
-          
-          </div>
-          <div className="m-2 p-3">
-            {products && products.length < total && (
-              <button
-                className="btn loadmore"
-                onClick={(e) => {
-                  e.preventDefault();
-                  if(checked && radio)
-                  {
-                    setPage(1);
-                  }
-                  else{
-                    setPage(page + 1);
-                  }
-                }}
-              >
-                {loading ? (
-                  "Loading ..."
-                ) : (
-                  <>
-                    {" "}
-                    Loadmore <AiOutlineReload />
-                  </>
-                )}
-              </button>
-            )}
-          </div>
+                <div className="card-footer d-flex justify-content-between bg-light border">
+                  <button  onClick={() => navigate(`/product/${p.slug}`)} className="btn btn-sm text-dark p-0">
+                    <i
+                     
+                      className="fas fa-eye text-primary mr-1"
+                    />
+                    View Detail
+                  </button>
+                  <button
+                    onClick={() => {
+                      setCart([...cart, p]);
+                      localStorage.setItem(
+                        "cart",
+                        JSON.stringify([...cart, p])
+                      );
+                      toast.success("Item Added to cart");
+                    }}
+                    className="btn btn-sm text-dark p-0"
+                  >
+                    <i className="fas fa-shopping-cart text-primary mr-1" />
+                    Add To Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
+      </div>:
+      <div>
+      {
+        products!==0? <Shimmer/>:
+        <React.Fragment>
+        <div className="text-center mb-4 h-100">No Products found</div>
+        </React.Fragment>
+      }
+     
       </div>
+     
+      }
+     
     </Layout>
   );
 };
 
 export default ProductPage;
-
-
-
-
-
-

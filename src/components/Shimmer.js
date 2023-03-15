@@ -3,39 +3,42 @@ import React from 'react'
 export const Shimmer = () => {
     return (
         <React.Fragment>
-            <div className="d-flex flex-wrap">
-                <div className="card m-2" style={{
-                    background: "#D3D3D3", height
-                        : "400px"
-                }} >
-
-                </div> <div className="card m-2" style={{
-                    background: "#D3D3D3", height
-                        : "400px"
-                }} >
-
-                </div> <div className="card m-2" style={{
-                    background: "#D3D3D3", height
-                        : "400px"
-                }} >
-
-                </div> <div className="card m-2" style={{
-                    background: "#D3D3D3", height
-                        : "400px"
-                }} >
-
-                </div> <div className="card m-2" style={{
-                    background: "#D3D3D3", height
-                        : "400px"
-                }} >
-
-                </div> <div className="card m-2" style={{
-                    background: "#D3D3D3", height
-                        : "400px"
-                }} >
-
-                </div>
+        <div className="container-fluid pt-5">
+        <div className="row px-xl-5 pb-3">
+        <div className="col-lg-3 col-md-6 col-sm-12 pb-1" >
+              <div style={{width:"250px",height:"400px",background:"grey"}} className="card product-item border-0 mb-4 ">
+        </div>
             </div>
+        <div className="col-lg-3 col-md-6 col-sm-12 pb-1" >
+              <div style={{width:"250px",height:"400px",background:"grey"}} className="card product-item border-0 mb-4">
+        </div>
+            </div>
+        <div className="col-lg-3 col-md-6 col-sm-12 pb-1" >
+              <div style={{width:"250px",height:"400px",background:"grey"}} className="card product-item border-0 mb-4">
+        </div>
+            </div>
+        <div className="col-lg-3 col-md-6 col-sm-12 pb-1" >
+              <div style={{width:"250px",height:"400px",background:"grey"}} className="card product-item border-0 mb-4">
+        </div>
+            </div>
+        <div className="col-lg-3 col-md-6 col-sm-12 pb-1" >
+              <div style={{width:"250px",height:"400px",background:"grey"}} className="card product-item border-0 mb-4">
+        </div>
+            </div>
+        <div className="col-lg-3 col-md-6 col-sm-12 pb-1" >
+              <div style={{width:"250px",height:"400px",background:"grey"}} className="card product-item border-0 mb-4">
+        </div>
+            </div>
+        <div className="col-lg-3 col-md-6 col-sm-12 pb-1" >
+              <div style={{width:"250px",height:"400px",background:"grey"}} className="card product-item border-0 mb-4">
+        </div>
+            </div>
+        <div className="col-lg-3 col-md-6 col-sm-12 pb-1" >
+              <div style={{width:"250px",height:"400px",background:"grey"}} className="card product-item border-0 mb-4">
+        </div>
+            </div>
+        </div>
+        </div>
 
         </React.Fragment>
     )
