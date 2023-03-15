@@ -21,7 +21,7 @@ const ProductDetails = () => {
   const scrollToTop = () => {
     window.scrollTo(0, 0)
 }
-
+scrollToTop()
   //getProduct
   const getProduct = async () => {
     try {
