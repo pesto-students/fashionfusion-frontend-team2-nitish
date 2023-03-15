@@ -6,7 +6,9 @@
   color: gray;
   font-family: "Playfair Display", serif;
 }
-
+.icon-size{
+  font-size: 40px;
+}
 .home-page {
   display: flex;
   flex-wrap: wrap;
@@ -866,6 +868,7 @@ mark,
 .img-fluid {
   max-width: 100%;
   height: auto;
+  cursor: pointer;
 }
 
 .img-thumbnail {
