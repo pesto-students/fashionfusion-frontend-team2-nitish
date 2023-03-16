@@ -126,42 +126,45 @@ scrollToTop()
   return (
     <Layout title={"ALl Products - Best offers "}>
       <h1>dfddc</h1>
-      <div className="d-flex pt-3 ml-5"> 
-        <select
-         className="form-select m-2 col-3"
-          onChange={(e) => {
-            setProducts('')
-            setChecked(e.target.value);
-          }}
-        >
-          <option value="">Select a Category</option>
-          {categories.map((p) => (
-            <option value={p._id}>{p.name}</option>
-          ))}
-        </select>
+      <div className="container-lg">
+      <div className="row  pt-3 "> 
+      <select
+       className="form-select m-2 col-lg-3 col-md-6 col-sm-12 "
+        onChange={(e) => {
+          setProducts('')
+          setChecked(e.target.value);
+        }}
+      >
+        <option value="">Select a Category</option>
+        {categories.map((p) => (
+          <option value={p._id}>{p.name}</option>
+        ))}
+      </select>
 
-        <select
-        className="form-select m-2 col-3"
-          onChange={(e) => {
-            setProducts('')
-            let val = [e.target.value];
-            const result = val.map((str) => str.split(",").map(Number)).flat();
-           
-            setRadio(result);
-          }}
-        >
-          <option>Pricing Range</option>
-          {Prices.map((p) => (
-            <option value={p.array}>{p.name}</option>
-          ))}
-        </select>
-        <button className="m-2 btn btn-secondary col-3" onClick={()=>
-          {
-           window.location.reload()
-          }}>
-        Reset Filters
-        </button>
+      <select
+      className="form-select m-2 col-lg-3 col-md-6 col-sm-12 "
+        onChange={(e) => {
+          setProducts('')
+          let val = [e.target.value];
+          const result = val.map((str) => str.split(",").map(Number)).flat();
+         
+          setRadio(result);
+        }}
+      >
+        <option>Pricing Range</option>
+        {Prices.map((p) => (
+          <option value={p.array}>{p.name}</option>
+        ))}
+      </select>
+      <button className="m-2 btn btn-secondary col-lg-3 col-md-6 col-sm-12" onClick={()=>
+        {
+         window.location.reload()
+        }}>
+      Reset Filters
+      </button>
+    </div>
       </div>
+    
       {products.length>0 ?
         <div className="container-fluid pt-3">
         <div className="text-center mb-4"></div>

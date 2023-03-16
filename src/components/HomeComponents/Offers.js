@@ -13,10 +13,10 @@ const Offers = () => {
                 alt="img"
               />
               <div className="position-relative" style={{ zIndex: 1 }}>
-                <h5 className="text-uppercase text-primary mb-3">
+                <h5 className="text-uppercase text-right text-primary mb-3">
                   20% off the all order
                 </h5>
-                <h1 className="mb-4 font-weight-semi-bold">
+                <h1 className="mb-4 text-right font-weight-semi-bold">
                   Spring Collection
                 </h1>
                 <Link
@@ -35,10 +35,10 @@ const Offers = () => {
                 alt="img"
               />
               <div className="position-relative" style={{ zIndex: 1 }}>
-                <h5 className="text-uppercase text-primary mb-3">
+                <h5 className="text-uppercase text-left text-primary mb-3">
                   20% off the all order
                 </h5>
-                <h1 className="mb-4 font-weight-semi-bold">
+                <h1 className="mb-4 text-left font-weight-semi-bold">
                   Winter Collection
                 </h1>
                 <Link
