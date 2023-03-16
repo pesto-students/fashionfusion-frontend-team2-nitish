@@ -1,6 +1,10 @@
 import React from "react";
 import Layout from "./../components/Layout/Layout";
 const Contact = () => {
+  const scrollToTop = () => {
+    window.scrollTo(0, 0)
+}
+scrollToTop()
   return (
     <Layout title={"Contact us"}>
     <div className="container-fluid pt-5 top">
