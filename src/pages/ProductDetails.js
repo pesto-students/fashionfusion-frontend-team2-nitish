@@ -53,8 +53,9 @@ scrollToTop()
   return (
     
     <Layout>
-      <div className=" product-details" >
-        <div className="col-md-4">
+    <div className="container-fluid">
+      <div className="row product-details" >
+        <div className="col-md-4 col-sm-12">
           <img
             src={`https://fashion-fusion-backend.onrender.com/api/v1/product/product-photo/${product._id}`}
             className="card-img-top"
@@ -64,7 +65,7 @@ scrollToTop()
             style={{background:"#D3D3D3"}}
           />
         </div>
-        <div className="col-md-5 product-details-info">
+        <div className="col-md-5 col-sm-12 product-details-info">
           <h1 className="text-center">Product Details</h1>
           <hr />
           <h6>Name : {product.name}</h6>
@@ -88,6 +89,7 @@ scrollToTop()
           }}
           class="add-to-cart btn ms-1">ADD TO CART</button>
         </div>
+      </div>
       </div>
       <hr />
       <h4>Similar Products ➡️</h4>
