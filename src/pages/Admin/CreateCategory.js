@@ -87,12 +87,12 @@ const CreateCategory = () => {
   };
   return (
     <Layout title={"Dashboard - Create Category"}>
-      <div className="container-fluid m-3 p-3 dashboard">
-        <div className="row top">
+      <div className="m-3 p-3 dashboard">
+        <div className="row top gap-5">
           <div className="col-md-3">
             <AdminMenu />
           </div>
-          <div className="col-md-9">
+          <div className="col-md-8">
             <h1>Manage Category</h1>
             <div className="p-3 w-50">
               <CategoryForm
