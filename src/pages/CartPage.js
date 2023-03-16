@@ -11,7 +11,11 @@ import "../styles/CartStyles.css";
 
 const CartPage = () => {
   const [auth, setAuth] = useAuth();
-  const [cart, setCart] = useCart();
+  const [cart, setCart] = useState([{
+    _id:"6411766ac39c83104ab27b11",
+    price:799,
+    slug:"Yellow-Checkered-Shirt"
+    }]);
   const [clientToken, setClientToken] = useState("");
   const [instance, setInstance] = useState("");
   const [loading, setLoading] = useState(false);
@@ -112,7 +116,7 @@ const CartPage = () => {
                 
                   <div className="col-lg-4  col-md-6 col-sm-12 pb-1 text-center mt-5 gap-2 shadow p-2"  key={p._id}>
                     <img
-                      src={`https://fashion-fusion-backend.onrender.com/api/v1/product/product-photo/${p._id}`}
+                      src={`https://fashion-fusion-backend.onrender.com/api/v1/product/product-photo/6411779ac39c83104ab27b52`}
                       className="card-img-top"
                       alt={p.name}
                       width="100%"
