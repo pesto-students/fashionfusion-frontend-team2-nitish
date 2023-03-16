@@ -38,15 +38,15 @@ const Footer = () => {
               <div className="col-md-4 mb-5">
                 <h5 className="font-weight-bold text-dark mb-4">Quick Links</h5>
                 <div className="d-flex flex-column justify-content-start">
-                  <Link className="text-dark mb-2">
+                  <Link to="/" className="text-dark mb-2">
                     <i className="fa fa-angle-right mr-2" />
                     Home
                   </Link>
-                  <Link className="text-dark mb-2">
+                  <Link to="/product-page" className="text-dark mb-2">
                     <i className="fa fa-angle-right mr-2" />
                     Our Shop
                   </Link>
-                  <Link className="text-dark mb-2">
+                  <Link to="/product-page" className="text-dark mb-2">
                     <i className="fa fa-angle-right mr-2" />
                     Shop Detail
                   </Link>
@@ -55,11 +55,11 @@ const Footer = () => {
               <div className="col-md-4 mb-5">
                 <h5 className="font-weight-bold text-dark mb-4">Quick Links</h5>
                 <div className="d-flex flex-column justify-content-start">
-                  <Link className="text-dark mb-2">
+                  <Link to="/cart" className="text-dark mb-2">
                     <i className="fa fa-angle-right mr-2" />
                     Shopping Cart
                   </Link>
-                  <Link className="text-dark mb-2">
+                  <Link to='/cart' className="text-dark mb-2">
                     <i className="fa fa-angle-right mr-2" />
                     Checkout
                   </Link>

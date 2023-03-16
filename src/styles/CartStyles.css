@@ -5,6 +5,10 @@
 {
   height: 400px;
   overflow-y: scroll;
+  border: 2px solid pink;
+}
+.cart-overflow::-webkit-scrollbar {
+  display: none;
 }
 .cart-page h1 {
   padding: 15px !important;

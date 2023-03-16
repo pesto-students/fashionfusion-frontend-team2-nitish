@@ -13,6 +13,23 @@ const Login = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
+// Test login function as user
+const handleUser=()=>
+{
+  setEmail("nazim@gmail.com")
+  setPassword("123321")
+  handleSubmit()
+}
+
+// Test login function as admin
+const handleAdmin=()=>
+{
+  setEmail("Jiteshkumar872001@gmail.com")
+  setPassword("123321")
+  handleSubmit()
+}
+
+
   // form function
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -82,7 +99,18 @@ const Login = () => {
           <button type="submit" className="btn btn-primary">
             LOGIN
           </button>
+         <div>
+         <button onClick={handleUser} className="btn btn-primary mt-2">
+        TEST LOGIN AS USER
+       </button>
+         </div>
+         <div>
+         <button onClick={handleAdmin} className="btn btn-primary mt-2">
+        TEST LOGIN AS ADMIN
+       </button>
+         </div>
         </form>
+        
       </div>
     </Layout>
   );
