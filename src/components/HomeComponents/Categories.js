@@ -13,7 +13,7 @@ const Categories = () => {
               className="cat-item d-flex flex-column border mb-4"
               style={{ padding: 30 }}
             >
-              <p className="text-right">15 Products</p>
+              <p className="text-right">Exclusive</p>
               <a
                 href
                 className="cat-img position-relative overflow-hidden mb-3"
@@ -21,7 +21,7 @@ const Categories = () => {
                 <img
                 onClick={() => navigate("/product-page")}
                   className="img-fluid"
-                  src="https://static-sellercentral.shopperr.in/images/supplier/61da9c8a124b4f0eed89a895/2023/21/1678708393319FGZ9Az.png"
+                  src="https://imagescdn.pantaloons.com/img/app/product/5/591890-5440322.jpg?imwidth=256"
                   alt="men"
                 />
               </a>
@@ -33,7 +33,7 @@ const Categories = () => {
               className="cat-item d-flex flex-column border mb-4"
               style={{ padding: 30 }}
             >
-              <p className="text-right">15 Products</p>
+              <p className="text-right">Exclusive</p>
               <a
                 href
                 className="cat-img position-relative overflow-hidden mb-3"
@@ -41,7 +41,7 @@ const Categories = () => {
                 <img
                 onClick={() => navigate("/product-page")}
                   className="img-fluid"
-                  src="https://static-sellercentral.shopperr.in/images/supplier/61da9c8a124b4f0eed89a895/2023/21/1678708495002NYKOS6.png"
+                  src="https://imagescdn.pantaloons.com/img/app/product/4/481881-3513864.jpg?imwidth=256"
                   alt="women"
                 />
               </a>
@@ -53,7 +53,7 @@ const Categories = () => {
               className="cat-item d-flex flex-column border mb-4"
               style={{ padding: 30 }}
             >
-              <p className="text-right">15 Products</p>
+              <p className="text-right">Exclusive</p>
               <a
                 href
                 className="cat-img position-relative overflow-hidden mb-3"
@@ -61,7 +61,7 @@ const Categories = () => {
                 <img
                 onClick={() => navigate("/product-page")}
                   className="img-fluid"
-                  src="https://static-sellercentral.shopperr.in/images/supplier/61da9c8a124b4f0eed89a895/2023/21/1678708527182SX2Gx3.png"
+                  src="https://imagescdn.pantaloons.com/img/app/product/5/558519-4634187.jpg?imwidth=256"
                   alt="kids"
                 />
               </a>
@@ -73,7 +73,7 @@ const Categories = () => {
               className="cat-item d-flex flex-column border mb-4"
               style={{ padding: 30 }}
             >
-              <p className="text-right">15 Products</p>
+              <p className="text-right">Exclusive</p>
               <a
                 href
                 className="cat-img position-relative overflow-hidden mb-3"
@@ -81,7 +81,7 @@ const Categories = () => {
                 <img
                 onClick={() => navigate("/product-page")}
                   className="img-fluid"
-                  src="https://static-sellercentral.shopperr.in/images/supplier/61da9c8a124b4f0eed89a895/2023/21/1678708527182SX2Gx3.png"
+                  src="https://imagescdn.pantaloons.com/img/app/product/7/736143-8235491.jpg?imwidth=256"
                   alt="img"
                 />
               </a>
@@ -93,7 +93,7 @@ const Categories = () => {
               className="cat-item d-flex flex-column border mb-4"
               style={{ padding: 30 }}
             >
-              <p className="text-right">15 Products</p>
+              <p className="text-right">Exclusive</p>
               <a
                 href
                 className="cat-img position-relative overflow-hidden mb-3"
@@ -101,7 +101,7 @@ const Categories = () => {
                 <img
                 onClick={() => navigate("/product-page")}
                   className="img-fluid"
-                  src="https://static-sellercentral.shopperr.in/images/supplier/61da9c8a124b4f0eed89a895/2023/21/1678708527182SX2Gx3.png"
+                  src="https://imagescdn.pantaloons.com/img/app/product/8/806164-9570277.jpg?imwidth=256"
                   alt="img"
                 />
               </a>
@@ -113,7 +113,7 @@ const Categories = () => {
               className="cat-item d-flex flex-column border mb-4"
               style={{ padding: 30 }}
             >
-              <p className="text-right">15 Products</p>
+              <p className="text-right">Exclusive</p>
               <a
                 href
                 className="cat-img position-relative overflow-hidden mb-3"
@@ -121,7 +121,7 @@ const Categories = () => {
                 <img
                 onClick={() => navigate("/product-page")}
                   className="img-fluid"
-                  src="https://static-sellercentral.shopperr.in/images/supplier/61da9c8a124b4f0eed89a895/2023/21/1678708527182SX2Gx3.png"
+                  src="https://imagescdn.pantaloons.com/img/app/product/7/792008-9287308.jpg?imwidth=256"
                   alt="img"
                 />
               </a>
