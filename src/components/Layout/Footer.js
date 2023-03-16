@@ -120,7 +120,7 @@ const Footer = () => {
           </div>
           <div className="col-md-6 px-xl-0 text-center text-md-right">
             <img
-              className="img-fluid"
+             
               src="https://static-sellercentral.shopperr.in/images/supplier/61da9c8a124b4f0eed89a895/2023/21/1678712000473ntSUxg.png"
               alt="footer"
             />

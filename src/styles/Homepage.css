@@ -867,7 +867,7 @@ mark,
 
 .img-fluid {
   max-width: 100%;
-  height: auto;
+  height: 400px;
   cursor: pointer;
 }
 
@@ -4423,8 +4423,9 @@ input[type="button"].btn-block {
   height: 1.5em;
   vertical-align: middle;
   content: "";
-  background: no-repeat center center;
+  /* background: no-repeat center center; */
   background-size: 100% 100%;
+ font-size: 24px;
 }
 
 @media (max-width: 575.98px) {
