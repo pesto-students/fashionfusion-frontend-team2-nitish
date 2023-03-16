@@ -126,10 +126,9 @@ scrollToTop()
   return (
     <Layout title={"ALl Products - Best offers "}>
       <h1>dfddc</h1>
-      <div> 
+      <div className="d-flex pt-3 ml-5"> 
         <select
-          name=""
-          id=""
+         className="form-select m-2 col-3"
           onChange={(e) => {
             setProducts('')
             setChecked(e.target.value);
@@ -142,6 +141,7 @@ scrollToTop()
         </select>
 
         <select
+        className="form-select m-2 col-3"
           onChange={(e) => {
             setProducts('')
             let val = [e.target.value];
@@ -155,7 +155,7 @@ scrollToTop()
             <option value={p.array}>{p.name}</option>
           ))}
         </select>
-        <button onClick={()=>
+        <button className="m-2 btn btn-secondary col-3" onClick={()=>
           {
            window.location.reload()
           }}>
@@ -163,7 +163,7 @@ scrollToTop()
         </button>
       </div>
       {products.length>0 ?
-        <div className="container-fluid pt-5">
+        <div className="container-fluid pt-3">
         <div className="text-center mb-4"></div>
         <div className="row px-xl-5 pb-3">
           {products?.map((p) => (
