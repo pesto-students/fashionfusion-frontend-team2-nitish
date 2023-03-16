@@ -1876,23 +1876,23 @@ pre code {
 .table {
   width: 100%;
   margin-bottom: 1rem;
-  color: #6F6F6F;
+  /* color: #6F6F6F; */
 }
 
 .table th,
 .table td {
   padding: 0.75rem;
   vertical-align: top;
-  border-top: 1px solid #EDF1FF;
+  /* border-top: 1px solid #EDF1FF; */
 }
 
 .table thead th {
   vertical-align: bottom;
-  border-bottom: 2px solid #EDF1FF;
+  /* border-bottom: 2px solid #EDF1FF; */
 }
 
 .table tbody + tbody {
-  border-top: 2px solid #EDF1FF;
+  /* border-top: 2px solid #EDF1FF; */
 }
 
 .table-sm th,
@@ -1901,12 +1901,12 @@ pre code {
 }
 
 .table-bordered {
-  border: 1px solid #EDF1FF;
+  /* border: 1px solid #EDF1FF; */
 }
 
 .table-bordered th,
 .table-bordered td {
-  border: 1px solid #EDF1FF;
+  /* border: 1px solid #EDF1FF; */
 }
 
 .table-bordered thead th,
@@ -7584,10 +7584,16 @@ button.bg-dark:focus {
 
 .shadow-sm {
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+  
 }
 
 .shadow {
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px !important;
+  overflow-x: scroll;
+  width:100%;
+}
+.shadow::-webkit-scrollbar{
+  display: none;
 }
 
 .shadow-lg {

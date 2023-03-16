@@ -44,15 +44,16 @@ const AdminOrders = () => {
   };
   return (
     <Layout title={"All Orders Data"}>
-      <div className="d-flex top dashboard">
-        <div className="col-md-3">
+    <div className="container-fluid">
+      <div className="row top dashboard">
+        <div className="col-md-3 col-sm-12">
           <AdminMenu />
         </div>
-        <div className="col-md-9">
+        <div className="col-md-9 col-sm-12">
           <h1 className="text-center">All Orders</h1>
           {orders?.map((o, i) => {
             return (
-              <div className="border shadow">
+              <div className="border shadow mt-2">
                 <table className="table">
                   <thead>
                     <tr>
@@ -113,6 +114,7 @@ const AdminOrders = () => {
             );
           })}
         </div>
+      </div>
       </div>
     </Layout>
   );
