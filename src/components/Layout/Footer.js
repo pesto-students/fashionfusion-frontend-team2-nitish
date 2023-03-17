@@ -71,7 +71,7 @@ const Footer = () => {
               </div>
               <div className="col-md-4 mb-5">
                 <h5 className="font-weight-bold text-dark mb-4">Newsletter</h5>
-                <form action>
+                <form >
                   <div className="form-group">
                     <input
                       type="text"

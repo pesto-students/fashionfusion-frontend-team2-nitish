@@ -87,7 +87,7 @@ scrollToTop()
             );
             toast.success("Item Added to cart");
           }}
-          class="add-to-cart btn ms-1">ADD TO CART</button>
+          className="add-to-cart btn ms-1">ADD TO CART</button>
         </div>
       </div>
       </div>

@@ -1,8 +1,8 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Slider = () => {
-  const navigate = useNavigate();
+  
 
   return (
     <React.Fragment>
@@ -23,13 +23,13 @@ const Slider = () => {
                 <h3 className="display-4 text-white font-weight-semi-bold mb-4">
                   Fashionable Dress
                 </h3>
-                <a
-                  onClick={() => navigate("/product-page")}
-                  href
+                <Link to="/product-page"
+                 
+                  
                   className="btn btn-light py-2 px-3"
                 >
                   Shop Now
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -47,9 +47,9 @@ const Slider = () => {
                 <h3 className="display-4 text-white font-weight-semi-bold mb-4">
                   Reasonable Price
                 </h3>
-                <a href className="btn btn-light py-2 px-3">
+                <Link to="/product-page"  className="btn btn-light py-2 px-3">
                   Shop Now
-                </a>
+                </Link>
               </div>
             </div>
           </div>
