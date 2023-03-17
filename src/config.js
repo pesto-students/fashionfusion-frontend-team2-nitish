@@ -2,7 +2,7 @@ import axios from "axios";
 
 export const axiosInstance = axios.create({
     baseURL:
-        "http://localhost:8080",
+        "https://fashion-fusion-backend.onrender.com",
 });
 
 export const scrollToTop = () => {
