@@ -23,7 +23,7 @@ Fashion Fusion is a full-stack eCommerce project designed to sell clothes online
 **User Authentication:** JWT
 ## Live Project
 
-You can access the live version of the Shoptik eCommerce by following this link [Fashion-Fusion](https://fashionfusion-frontend-team2-nitish.vercel.app/)
+You can access the live version of the Fashion Fusion  eCommerce by following this link [Fashion-Fusion](https://fashionfusion-frontend-team2-nitish.vercel.app/)
 
 
 ## Screenshots
