@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from "react";
 import AdminMenu from "../../components/Layout/AdminMenu";
 import Layout from "../../components/Layout/Layout";
+import { useNavigate } from "react-router-dom";
+
 import { useAuth } from "../../context/auth";
 import { Select } from "antd";
 import { axiosInstance } from "../../config";
 const { Option } = Select;
 
 const AdminOrders = () => {
+  const navigate=useNavigate();
   const [status, setStatus] = useState([
     "Not Process",
     "Processing",
@@ -86,7 +89,7 @@ const AdminOrders = () => {
                     </tr>
                   </tbody>
                 </table>
-                {/*
+              
                 <div className="container">
                   {o?.products?.map((p, i) => (
                     <div className="row mb-2 p-3 card flex-row" key={p._id}>
@@ -100,14 +103,14 @@ const AdminOrders = () => {
                         />
                       </div>
                       <div className="col-md-8 d-flex flex-column justify-content-center">
-                        <p>{p.name}</p>
-                        <p>{p.description}</p>
-                        <p>Price : {p.price}</p>
+                       <button onClick={() => navigate(`/product/${p.slug}`)}>
+                       See Product
+                       </button>
                       </div>
                     </div>
                   ))}
                 </div>
-                  */}
+               
               </div>
             );
           })}
