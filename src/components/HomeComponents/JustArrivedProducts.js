@@ -20,7 +20,7 @@ const JustArrivedProducts = () => {
     const checked="6411766ac39c83104ab27b11";
     const radio=[];
     try {
-      const { data } = await axios.post(`${process.env.REACT_APP_URL}/api/v1/product/product-filters`, {
+      const { data } = await axios.post(`https://fashion-fusion-backend.onrender.com/api/v1/product/product-filters`, {
         checked,
         radio
       });
