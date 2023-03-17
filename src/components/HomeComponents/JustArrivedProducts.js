@@ -12,7 +12,7 @@ const JustArrivedProducts = () => {
 
   useEffect(() => {
     filterProduct();
-  },);
+  },[]);
 
 
   const filterProduct = async () => {

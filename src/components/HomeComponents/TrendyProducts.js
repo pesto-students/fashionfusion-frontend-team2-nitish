@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { useCart } from "../../context/cart";
-import axios from "axios";
-import toast from "react-hot-toast";
+import { useCart } from "../../context/cart";import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
-
+import { axiosInstance } from "../../config";
 const TrendyProducts = () => {
   const navigate = useNavigate();
 
@@ -12,7 +10,7 @@ const TrendyProducts = () => {
 
   useEffect(() => {
     filterProduct();
-  },);
+  },[]);
 
 
   const filterProduct = async () => {
@@ -20,7 +18,7 @@ const TrendyProducts = () => {
     const checked="64116dc2c39c83104ab27a84";
     const radio=[];
     try {
-      const { data } = await axios.post("https://fashion-fusion-backend.onrender.com/api/v1/product/product-filters", {
+      const { data } = await axiosInstance.post("api/v1/product/product-filters", {
         checked,
         radio
       });
