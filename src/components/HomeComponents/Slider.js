@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { scrollToTop } from "../../config";
 
 const Slider = () => {
   
@@ -25,7 +26,7 @@ const Slider = () => {
                 </h3>
                 <Link to="/product-page"
                  
-                  
+                  onClick={scrollToTop}
                   className="btn btn-light py-2 px-3"
                 >
                   Shop Now
@@ -47,7 +48,7 @@ const Slider = () => {
                 <h3 className="display-4 text-white font-weight-semi-bold mb-4">
                   Reasonable Price
                 </h3>
-                <Link to="/product-page"  className="btn btn-light py-2 px-3">
+                <Link to="/product-page" onClick={scrollToTop}  className="btn btn-light py-2 px-3">
                   Shop Now
                 </Link>
               </div>

@@ -4,7 +4,7 @@ const Contact = () => {
   const scrollToTop = () => {
     window.scrollTo(0, 0);
   };
-  scrollToTop();
+  // scrollToTop();
   return (
     <Layout title={"Contact us"}>
       <div className="container-fluid pt-5 top">

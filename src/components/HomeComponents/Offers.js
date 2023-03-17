@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { scrollToTop } from "../../config";
 
 const Offers = () => {
   return (
@@ -20,6 +21,7 @@ const Offers = () => {
                   Spring Collection
                 </h1>
                 <Link
+                onClick={scrollToTop} 
                   to="/product-page"
                   className="btn btn-outline-primary py-md-2 px-md-3"
                 >
@@ -42,6 +44,7 @@ const Offers = () => {
                   Winter Collection
                 </h1>
                 <Link
+                onClick={scrollToTop} 
                   to="/product-page"
                   className="btn btn-outline-primary py-md-2 px-md-3"
                 >

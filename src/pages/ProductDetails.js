@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import Layout from "./../components/Layout/Layout";
-import axios from "axios";
 import { useParams, useNavigate } from "react-router-dom";
 import "../styles/ProductDetailsStyles.css";
 import { useCart } from "../context/cart";
 import toast from "react-hot-toast";
+import { axiosInstance } from "../config";
 // import { ProductDetailsShimmer } from "../components/Shimmer";
 const ProductDetails = () => {
   const [cart, setCart] = useCart();
@@ -21,12 +21,12 @@ const ProductDetails = () => {
   const scrollToTop = () => {
     window.scrollTo(0, 0)
 }
-scrollToTop()
+// scrollToTop()
   //getProduct
   const getProduct = async () => {
     try {
-      const { data } = await axios.get(
-        `https://fashion-fusion-backend.onrender.com/api/v1/product/get-product/${params.slug}`
+      const { data } = await axiosInstance.get(
+        `/api/v1/product/get-product/${params.slug}`
       );
       setProduct(data?.product);
       getSimilarProduct(data?.product._id, data?.product.category._id);
@@ -37,8 +37,8 @@ scrollToTop()
   //get similar product
   const getSimilarProduct = async (pid, cid) => {
     try {
-      const { data } = await axios.get(
-        `https://fashion-fusion-backend.onrender.com/api/v1/product/related-product/${pid}/${cid}`
+      const { data } = await axiosInstance.get(
+        `/api/v1/product/related-product/${pid}/${cid}`
       );
       setRelatedProducts(data?.products);
     } catch (error) {

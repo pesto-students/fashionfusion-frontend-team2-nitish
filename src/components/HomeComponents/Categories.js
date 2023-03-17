@@ -1,8 +1,9 @@
 import React from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { scrollToTop } from "../../config";
 
 const Categories = () => {
-  const navigate = useNavigate();
+ 
 
   return (
     <React.Fragment>
@@ -15,11 +16,12 @@ const Categories = () => {
             >
               <p className="text-right">Exclusive</p>
               <Link
-               
+               to="/product-page"
+               onClick={scrollToTop} 
                 className="cat-img position-relative overflow-hidden mb-3"
               >
                 <img
-                onClick={() => navigate("/product-page")}
+               
                   className="img-fluid"
                   src="https://imagescdn.pantaloons.com/img/app/product/5/591890-5440322.jpg?imwidth=256"
                   alt="men"
@@ -35,11 +37,12 @@ const Categories = () => {
             >
               <p className="text-right">Exclusive</p>
               <Link
-              
+              to="/product-page"
+              onClick={scrollToTop} 
                 className="cat-img position-relative overflow-hidden mb-3"
               >
                 <img
-                onClick={() => navigate("/product-page")}
+              
                   className="img-fluid"
                   src="https://imagescdn.pantaloons.com/img/app/product/4/481881-3513864.jpg?imwidth=256"
                   alt="women"
@@ -55,11 +58,12 @@ const Categories = () => {
             >
               <p className="text-right">Exclusive</p>
               <Link
-              
+              to="/product-page"
+              onClick={scrollToTop} 
                 className="cat-img position-relative overflow-hidden mb-3"
               >
                 <img
-                onClick={() => navigate("/product-page")}
+              
                   className="img-fluid"
                   src="https://imagescdn.pantaloons.com/img/app/product/5/558519-4634187.jpg?imwidth=256"
                   alt="kids"
@@ -75,11 +79,12 @@ const Categories = () => {
             >
               <p className="text-right">Exclusive</p>
               <Link
-                
+              to="/product-page"
+              onClick={scrollToTop} 
                 className="cat-img position-relative overflow-hidden mb-3"
               >
                 <img
-                onClick={() => navigate("/product-page")}
+               
                   className="img-fluid"
                   src="https://imagescdn.pantaloons.com/img/app/product/7/736143-8235491.jpg?imwidth=256"
                   alt="img"
@@ -95,11 +100,12 @@ const Categories = () => {
             >
               <p className="text-right">Exclusive</p>
               <Link
-                
+              to="/product-page"
+              onClick={scrollToTop} 
                 className="cat-img position-relative overflow-hidden mb-3"
               >
                 <img
-                onClick={() => navigate("/product-page")}
+               
                   className="img-fluid"
                   src="https://imagescdn.pantaloons.com/img/app/product/8/806164-9570277.jpg?imwidth=256"
                   alt="img"
@@ -115,11 +121,12 @@ const Categories = () => {
             >
               <p className="text-right">Exclusive</p>
               <Link
-                
+              to="/product-page"
+              onClick={scrollToTop} 
                 className="cat-img position-relative overflow-hidden mb-3"
               >
                 <img
-                onClick={() => navigate("/product-page")}
+              
                   className="img-fluid"
                   src="https://imagescdn.pantaloons.com/img/app/product/7/792008-9287308.jpg?imwidth=256"
                   alt="img"
