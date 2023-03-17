@@ -30,7 +30,7 @@ You can access the live version of the Shoptik eCommerce by following this link 
 
 **Desktop**
 
-![App Screenshot](https://tinyurl.com/2ppg2meq)
+![App Screenshot]([https://tinyurl.com/2ppg2meq](https://static-sellercentral.shopperr.in/images/supplier/607e8d9394c4c6938baa94cd/2023/21/1679030639096VhnOwi.png))
 ## Lessons Learned
 
 - Integrating Paypal payment on the frontend and backend using Brainstree API
