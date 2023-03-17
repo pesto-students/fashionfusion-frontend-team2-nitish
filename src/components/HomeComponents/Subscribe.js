@@ -15,7 +15,7 @@ const Subscribe = () => {
                 diam labore at justo ipsum eirmod duo labore labore.
               </p>
             </div>
-            <form action>
+            <form >
               <div className="input-group">
                 <input
                   type="text"

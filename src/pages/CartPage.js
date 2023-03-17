@@ -18,7 +18,7 @@ const CartPage = () => {
   const navigate = useNavigate();
 
 
-  console.log(cart);
+  // console.log(cart);
   //total price
   const totalPrice = () => {
     try {

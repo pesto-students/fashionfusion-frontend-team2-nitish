@@ -137,7 +137,7 @@ scrollToTop()
       >
         <option value="">Select a Category</option>
         {categories.map((p) => (
-          <option value={p._id}>{p.name}</option>
+          <option value={p._id} key={p._id}>{p.name}</option>
         ))}
       </select>
 
@@ -153,7 +153,7 @@ scrollToTop()
       >
         <option>Pricing Range</option>
         {Prices.map((p) => (
-          <option value={p.array}>{p.name}</option>
+          <option value={p.array} key={Math.random(0,5)}>{p.name}</option>
         ))}
       </select>
       <button className="m-2 btn btn-secondary col-lg-3 col-md-6 col-sm-12" onClick={()=>
