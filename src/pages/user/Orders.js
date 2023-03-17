@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from "react";
 import UserMenu from "../../components/Layout/UserMenu";
 import Layout from "./../../components/Layout/Layout";
-import axios from "axios";
 import { useAuth } from "../../context/auth";
 import moment from "moment";
+import { axiosInstance } from "../../config";
 
 const Orders = () => {
   const [orders, setOrders] = useState([]);
   const [auth, setAuth] = useAuth();
   const getOrders = async () => {
     try {
-      const { data } = await axios.get("https://fashion-fusion-backend.onrender.com/api/v1/auth/orders");
+      const { data } = await axiosInstance.get("/api/v1/auth/orders");
       setOrders(data);
     } catch (error) {
       console.log(error);

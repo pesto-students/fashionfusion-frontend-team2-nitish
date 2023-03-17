@@ -5,6 +5,7 @@ import { useNavigate, useLocation } from "react-router-dom";
 import toast from "react-hot-toast";
 import "../../styles/AuthStyles.css";
 import { useAuth } from "../../context/auth";
+import { axiosInstance } from "../../config";
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -34,7 +35,7 @@ const handleAdmin=()=>
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("https://fashion-fusion-backend.onrender.com/api/v1/auth/login", {
+      const res = await axiosInstance.post("/api/v1/auth/login", {
         email,
         password,
       });

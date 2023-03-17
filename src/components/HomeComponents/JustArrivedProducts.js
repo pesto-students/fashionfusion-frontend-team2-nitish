@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useCart } from "../../context/cart";
-import axios from "axios";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
+import { axiosInstance } from "../../config";
 
 const JustArrivedProducts = () => {
   const navigate = useNavigate();
@@ -20,7 +20,7 @@ const JustArrivedProducts = () => {
     const checked="6411766ac39c83104ab27b11";
     const radio=[];
     try {
-      const { data } = await axios.post(`https://fashion-fusion-backend.onrender.com/api/v1/product/product-filters`, {
+      const { data } = await axiosInstance.post(`/api/v1/product/product-filters`, {
         checked,
         radio
       });

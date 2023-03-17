@@ -9,6 +9,7 @@ import Layout from "./../components/Layout/Layout";
 import { AiOutlineReload } from "react-icons/ai";
 import "../styles/Homepage.css";
 import { Shimmer } from "../components/Shimmer";
+import { axiosInstance } from "../config";
 
 const ProductPage = () => {
   const navigate = useNavigate();
@@ -24,13 +25,13 @@ const ProductPage = () => {
   const scrollToTop = () => {
     window.scrollTo(0, 0)
 }
-scrollToTop()
+// scrollToTop()
 
   //get all cat
   const getAllCategory = async () => {
     try {
-      const { data } = await axios.get(
-        "https://fashion-fusion-backend.onrender.com/api/v1/category/get-category"
+      const { data } = await axiosInstance.get(
+        "/api/v1/category/get-category"
       );
       if (data?.success) {
         setCategories(data?.category);
@@ -48,8 +49,8 @@ scrollToTop()
   const getAllProducts = async () => {
     try {
       setLoading(true);
-      const { data } = await axios.get(
-        `https://fashion-fusion-backend.onrender.com/api/v1/product/product-list/${page}`
+      const { data } = await axiosInstance.get(
+        `/api/v1/product/product-list/${page}`
       );
       setLoading(false);
       setProducts(data.products);
@@ -62,8 +63,8 @@ scrollToTop()
   //getTOtal COunt
   const getTotal = async () => {
     try {
-      const { data } = await axios.get(
-        "https://fashion-fusion-backend.onrender.com/api/v1/product/product-count"
+      const { data } = await axiosInstance.get(
+        "/api/v1/product/product-count"
       );
       setTotal(data?.total);
     } catch (error) {
@@ -79,8 +80,8 @@ scrollToTop()
   const loadMore = async () => {
     try {
       setLoading(true);
-      const { data } = await axios.get(
-        `https://fashion-fusion-backend.onrender.com/api/v1/product/product-list/${page}`
+      const { data } = await axiosInstance.get(
+        `/api/v1/product/product-list/${page}`
       );
       setLoading(false);
       setProducts([...products, ...data?.products]);
@@ -104,8 +105,8 @@ scrollToTop()
     // console.log("checked",typeof checked)
 
     try {
-      const { data } = await axios.post(
-        "https://fashion-fusion-backend.onrender.com/api/v1/product/product-filters",
+      const { data } = await axiosInstance.post(
+        "/api/v1/product/product-filters",
         {
           checked,
           radio,

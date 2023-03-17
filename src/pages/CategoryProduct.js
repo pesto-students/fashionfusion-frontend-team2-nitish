@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Layout from "../components/Layout/Layout";
 import { useParams, useNavigate } from "react-router-dom";
 import "../styles/CategoryProductStyles.css";
-import axios from "axios";
+import { axiosInstance } from "d:/mern-stack-full-ecommerce-site/client/src/config";
 const CategoryProduct = () => {
   const params = useParams();
   const navigate = useNavigate();
@@ -14,8 +14,8 @@ const CategoryProduct = () => {
   }, [params?.slug]);
   const getPrductsByCat = async () => {
     try {
-      const { data } = await axios.get(
-        `https://fashion-fusion-backend.onrender.com/api/v1/product/product-category/${params.slug}`
+      const { data } = await axiosInstance.get(
+        `/api/v1/product/product-category/${params.slug}`
       );
       setProducts(data?.products);
       setCategory(data?.category);

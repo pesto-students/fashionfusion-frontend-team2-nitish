@@ -1,6 +1,7 @@
 import React from "react";
 import "../../styles/Homepage.css";
 import { Link } from "react-router-dom";
+import { scrollToTop } from "../../config";
 const Footer = () => {
   return (
     <React.Fragment>
@@ -38,15 +39,15 @@ const Footer = () => {
               <div className="col-md-4 mb-5">
                 <h5 className="font-weight-bold text-dark mb-4">Quick Links</h5>
                 <div className="d-flex flex-column justify-content-start">
-                  <Link to="/" className="text-dark mb-2">
+                  <Link to="/" onClick={scrollToTop}  className="text-dark mb-2">
                     <i className="fa fa-angle-right mr-2" />
                     Home
                   </Link>
-                  <Link to="/product-page" className="text-dark mb-2">
+                  <Link to="/product-page" onClick={scrollToTop}  className="text-dark mb-2">
                     <i className="fa fa-angle-right mr-2" />
                     Our Shop
                   </Link>
-                  <Link to="/product-page" className="text-dark mb-2">
+                  <Link to="/product-page" onClick={scrollToTop}  className="text-dark mb-2">
                     <i className="fa fa-angle-right mr-2" />
                     Shop Detail
                   </Link>
@@ -55,15 +56,15 @@ const Footer = () => {
               <div className="col-md-4 mb-5">
                 <h5 className="font-weight-bold text-dark mb-4">Quick Links</h5>
                 <div className="d-flex flex-column justify-content-start">
-                  <Link to="/cart" className="text-dark mb-2">
+                  <Link to="/cart" onClick={scrollToTop}  className="text-dark mb-2">
                     <i className="fa fa-angle-right mr-2" />
                     Shopping Cart
                   </Link>
-                  <Link to='/cart' className="text-dark mb-2">
+                  <Link to='/cart' onClick={scrollToTop}  className="text-dark mb-2">
                     <i className="fa fa-angle-right mr-2" />
                     Checkout
                   </Link>
-                  <Link to='/contact' className="text-dark">
+                  <Link to='/contact' onClick={scrollToTop} className="text-dark">
                     <i className="fa fa-angle-right mr-2" />
                     Contact Us
                   </Link>

@@ -2,9 +2,9 @@ import React, { useState, useEffect } from "react";
 import Layout from "./../../components/Layout/Layout";
 import AdminMenu from "./../../components/Layout/AdminMenu";
 import toast from "react-hot-toast";
-import axios from "axios";
 import { Select } from "antd";
 import { useNavigate, useParams } from "react-router-dom";
+import { axiosInstance } from "../../config";
 const { Option } = Select;
 
 const UpdateProduct = () => {
@@ -23,8 +23,8 @@ const UpdateProduct = () => {
   //get single product
   const getSingleProduct = async () => {
     try {
-      const { data } = await axios.get(
-        `https://fashion-fusion-backend.onrender.com/api/v1/product/get-product/${params.slug}`
+      const { data } = await axiosInstance.get(
+        `/api/v1/product/get-product/${params.slug}`
       );
       setName(data.product.name);
       setId(data.product._id);
@@ -45,7 +45,7 @@ const UpdateProduct = () => {
   //get all category
   const getAllCategory = async () => {
     try {
-      const { data } = await axios.get("https://fashion-fusion-backend.onrender.com/api/v1/category/get-category");
+      const { data } = await axiosInstance.get("/api/v1/category/get-category");
       if (data?.success) {
         setCategories(data?.category);
       }
@@ -70,8 +70,8 @@ const UpdateProduct = () => {
       productData.append("quantity", quantity);
       photo && productData.append("photo", photo);
       productData.append("category", category);
-      const { data } = axios.put(
-        `https://fashion-fusion-backend.onrender.com/api/v1/product/update-product/${id}`,
+      const { data } = axiosInstance.put(
+        `/api/v1/product/update-product/${id}`,
         productData
       );
       if (data?.success) {
@@ -91,8 +91,8 @@ const UpdateProduct = () => {
     try {
       let answer = window.prompt("Are You Sure want to delete this product ? ");
       if (!answer) return;
-      const { data } = await axios.delete(
-        `https://fashion-fusion-backend.onrender.com/api/v1/product/delete-product/${id}`
+      const { data } = await axiosInstance.delete(
+        `/api/v1/product/delete-product/${id}`
       );
       toast.success("Product DEleted Succfully");
       navigate("/dashboard/admin/products");
